@@ -59,10 +59,10 @@ export default defineThemeConfig({
     // Using giscus
     comment: {
       type: "giscus",
-      repo: "zeanzai/zeanzai.github.io",
-      repoId: "MDEwOlJlcG9zaXRvcnkxNDY3MjEzNDc=",
+      repo: "tianqingxiaozhu/tianqingxiaozhu.github.io",
+      repoId: "R_kgDOIQk2dw",
       category: "Announcements",
-      categoryId: "DIC_kwDOCL7KQ84CO1-c",
+      categoryId: "DIC_kwDOIQk2d84CSE2w",
     },
 
     mdEnhance: {
