@@ -60,9 +60,9 @@ export default defineThemeConfig({
     comment: {
       type: "giscus",
       repo: "tianqingxiaozhu/tianqingxiaozhu.github.io",
-      repoId: "R_kgDOIQk2dw",
+      repoId: "R_kgDOIRd0Lg",
       category: "Announcements",
-      categoryId: "DIC_kwDOIQk2d84CSE2w",
+      categoryId: "DIC_kwDOIRd0Ls4CSHFX",
     },
 
     mdEnhance: {
