@@ -6,7 +6,7 @@ export default defineThemeConfig({
   hostname: "https://tianqingxiaozhu.com",
 
   author: {
-    name: "天晴小猪",
+    name: "小阳聊编程",
     url: "https://tianqingxiaozhu.com",
   },
 
@@ -14,7 +14,7 @@ export default defineThemeConfig({
 
   logo: "/logo.JPG",
 
-  repo: "zeanzai/zeanzai.github.io",
+  repo: "tianqingxiaozhu/tianqingxiaozhu.github.io",
 
   docsDir: "docs",
 
