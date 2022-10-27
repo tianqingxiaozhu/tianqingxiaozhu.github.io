@@ -6,7 +6,7 @@ export default defineThemeConfig({
   hostname: "https://tianqingxiaozhu.com",
 
   author: {
-    name: "小阳聊编程",
+    name: "天晴小猪",
     url: "https://tianqingxiaozhu.com",
   },
 
