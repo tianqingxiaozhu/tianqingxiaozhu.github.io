@@ -440,30 +440,6 @@ export default defineSidebarConfig({
     },
   ],
 
-  // 谷粒商城
-  "/guli": [
-    {
-      text: "1.全文搜索（ElasticSearch）.md",
-      icon: "alias",
-      link: "1.全文搜索（ElasticSearch）.md",
-    },
-    {text:"2.压力测试+优化（Jmeter）",icon:"alias",link:"2.压力测试+优化（Jmeter）.md"},
-    {text:"3.缓存（Redis）",icon:"alias",link:"3.缓存（Redis）.md"},
-    {text:"4.异步与线程池（Concurrent）",icon:"alias",link:"4.异步与线程池（Concurrent）.md"},
-    {text:"5.短信服务",icon:"alias",link:"5.短信服务.md"},
-    {text:"6.社交登录OAuth2.0",icon:"alias",link:"6.社交登录OAuth2.0.md"},
-    {text:"7.分布式session（SpringSession）",icon:"alias",link:"7.分布式session（SpringSession）.md"},
-    {text:"8.消息中间件（RabbitMQ）",icon:"alias",link:"8.消息中间件（RabbitMQ）.md"},
-    {text:"9.本地事务&分布式事务（Seata）",icon:"alias",link:"9.本地事务&分布式事务（Seata）.md"},
-    {text:"10.支付",icon:"alias",link:"10.支付.md"},
-    {text:"11.定时任务（Scheduled）",icon:"alias",link:"11.定时任务（Scheduled）.md"},
-    {text:"12.熔断+降级+限流+链路追踪（sentinel）",icon:"alias",link:"12.熔断+降级+限流+链路追踪（sentinel）.md"},
-    {text:"13.服务链路追踪（sleuth+zipkin）",icon:"alias",link:"13.服务链路追踪（sleuth+zipkin）.md"},
-    {text:"14.K8S+KubeSphere+DevOps（新版笔记）",icon:"alias",link:"14.K8S+KubeSphere+DevOps（新版笔记）.md"},
-    {text:"14.k8s+devops（旧版笔记）",icon:"alias",link:"14.k8s+devops（旧版笔记）.md"},
-    {text:"15.集群知识（MySQL+Redis+ElasticSearch+RabbitMQ）",icon:"alias",link:"15.集群知识（MySQL+Redis+ElasticSearch+RabbitMQ）.md"},
-  ],
-
   // 网站建设 done
   "/slashteen/web/": [
     {

@@ -15,7 +15,6 @@ export default defineNavbarConfig([
   //   ]
   // },
   { text: "资源共享", icon: "page", link: "/share/" },
-  { text: "谷粒商城", icon: "launch", link: "/guli/1.全文搜索（ElasticSearch）.md" },
   { text: "副业之路", icon: "java", prefix: "/slashteen/",
     children: [
       { text: "网站建设", icon: "page", link: "web/" },
