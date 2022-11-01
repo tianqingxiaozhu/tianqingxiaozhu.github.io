@@ -31,7 +31,7 @@ export default defineThemeConfig({
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
-    description: "浪漫骑士的二流键盘</br>我究竟拿时间换了什么？",
+    description: "浪漫骑士的二流键盘",
     roundAvatar: true,
     // intro: "/intro.html",
     // medias: {

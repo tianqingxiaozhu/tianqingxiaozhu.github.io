@@ -438,6 +438,19 @@ export default defineSidebarConfig({
         },
       ],
     },
+    // 工作技巧
+    {
+      text: "九、工作技巧",
+      collapsable: true,
+      prefix: "devtips/",
+      children: [
+        {
+          text: "你的团队用对版本控制了吗？",
+          link: "versioncontrol.md",
+        },
+        
+      ],
+    },
   ],
 
   // 网站建设 done
