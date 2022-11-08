@@ -407,6 +407,18 @@ export default defineSidebarConfig({
           text: "多租户SaaS实战",
           link: "una-saas-toturial.md",
         },
+        {
+          text: "SpringCloud-Alibaba微服务架构",
+          
+          prefix: "springcloud-alibaba/",
+          collapsable: true,
+          children: [
+            {
+              text: "分布式服务治理",
+              link: "chapter01.md",
+            }
+          ]
+        },
       ],
     },
 
