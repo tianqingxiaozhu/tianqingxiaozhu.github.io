@@ -15,6 +15,7 @@ export default defineNavbarConfig([
   //   ]
   // },
   { text: "资源共享", icon: "page", link: "/share/" },
+  { text: "SpringCloud-Alibaba", icon: "code", link: "/springcloud-alibaba/" },
   { text: "副业之路", icon: "java", prefix: "/slashteen/",
     children: [
       { text: "网站建设", icon: "page", link: "web/" },

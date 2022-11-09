@@ -407,18 +407,6 @@ export default defineSidebarConfig({
           text: "多租户SaaS实战",
           link: "una-saas-toturial.md",
         },
-        {
-          text: "SpringCloud-Alibaba微服务架构",
-          
-          prefix: "springcloud-alibaba/",
-          collapsable: true,
-          children: [
-            {
-              text: "分布式服务治理",
-              link: "chapter01.md",
-            }
-          ]
-        },
       ],
     },
 
@@ -462,6 +450,54 @@ export default defineSidebarConfig({
         },
         
       ],
+    },
+  ],
+
+  // springcloud-alibaba
+  "/springcloud-alibaba/": [
+    {
+      text: "01.分布式服务治理",
+      link: "chapter01.md",
+    },
+    {
+      text: "02.分布式服务配置",
+      link: "chapter02.md",
+    },
+    {
+      text: "03.分布式远程服务调用",
+      link: "chapter03.md",
+    },
+    {
+      text: "04.分布式服务网关",
+      link: "chapter04.md",
+    },
+    {
+      text: "05.分布式服务事务管理",
+      link: "chapter05.md",
+    },
+    {
+      text: "06.分布式服务消息处理",
+      link: "chapter06.md",
+    },
+    {
+      text: "07.分布式服务流量控制",
+      link: "chapter07.md",
+    },
+    {
+      text: "08.分布式服务缓存",
+      link: "chapter08.md",
+    },
+    {
+      text: "09.分布式服务链路追踪",
+      link: "chapter09.md",
+    },
+    {
+      text: "10.分库分表",
+      link: "chapter10.md",
+    },
+    {
+      text: "11.分布式服务Job",
+      link: "chapter11.md",
     },
   ],
 

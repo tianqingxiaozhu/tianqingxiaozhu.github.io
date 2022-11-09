@@ -1,5 +1,5 @@
 ---
-title: "分布式服务治理"
+title: "分布式服务治理之Nacos"
 category:
   - "springcloud-alibaba"
 tag:
@@ -418,10 +418,16 @@ management:
 
 浏览器中分别输入： `http://localhost:11000/consumer/hello1` 、 `http://localhost:11000/consumer/hello2` ，均访问成功。
 
+
+
 ## 总结
 
 1. 介绍了分布式服务治理技术的产生背景及相关内容；
 2. 介绍了分布式服务治理的相关技术选型；
 3. Nacos的服务注册与发现的两种RPC调用过程及开发过程中的最佳实践；
+
+
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+
 
 
