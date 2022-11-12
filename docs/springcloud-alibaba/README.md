@@ -1,19 +1,23 @@
 ---
-title: "分布式系统中的技术选型"
+title: "基于SpringCloud-Alibaba的微服务实战演练"
 category:
   - "springcloud-alibaba"
 tag:
   - "分布式系统"
-  - "技术选型"
+  - "实战"
 ---
 
-## 为什么要做技术选型
+## 组件 
 
-## 技术选型的标准
-
-## 技术选型的实践过程
-
-## 总结
+- Nacos 
+- SpringCloud-Gateway
+- OpenFeign 
+- Sentinel
+- Seata
+- RocketMQ
+- Skywalking
+- ELK
+- ...
 
 
 
@@ -22,19 +26,20 @@ tag:
 
 - [ ] 架构师都是如何做技术选型的？
 - [x] nacos
-  - [x] 作为注册中心使用OpenFeign进行远程调用
+  - [x] 注册中心
     - [x] 传统调用方式
     - [x] 使用openfeign方式进行调用
-    - [x] 不同使用方式
+    - [x] openfeign的进阶使用
       - [x] 多参数
       - [x] URL中携带参数
       - [x] 传递对象
       - [x] 文件上传
       - [x] 文件下载
-    - [x] 开启GZIP压缩
-    - [x] 开启日志
-    - [x] 超时控制
-    - [x] 替换客户端
+      - [x] 开启GZIP压缩
+      - [x] 开启日志
+      - [x] 超时控制
+      - [x] 替换客户端
+    - [x] 注册到不同的命名空间以进行服务隔离
   - [x] 配置中心
     - [x] 传统读取配置文件方式
     - [x] 从配置中心中读取配置项
@@ -42,14 +47,15 @@ tag:
     - [x] 把共享配置文件中的配置项映射成JavaBean
     - [x] 以服务名作为命名空间进行配置隔离
     - [x] 以环境名作为命名空间进行配置隔离
+    - [ ] 灰度发布
 - [ ] gateway
-  - [ ] 服务发现的路由规则
-  - [ ] 权重路由
-  - [ ] https的使用
-  - [ ] 自定义全局异常
-  - [ ] 限流及自定义限流异常
-  - [ ] 路由规则可配置化
-  - [ ] 集成swagger
+  - [x] 服务发现的路由规则
+  - [x] 重写路由
+  - [x] 路由规则可配置化
+  - [ ] https的使用[xxx] 现在微服务的部署架构大多情况下是SLB+Nginx类型的部署模型，而微服务大多都是在内网环境中，因此网关也很少使用https；
+  - [ ] 自定义全局异常[xxx]
+  - [ ] 基于限流及自定义限流异常
+  - [x] 集成swagger
   - [ ] CROS方案
   - [ ] 灰度发布
 - [ ] Seata
@@ -64,7 +70,6 @@ tag:
   - [ ] 发送消息并确认
   - [ ] 接受消息
   - [ ] 接受消息并确认
-- [ ] Sentinel
 - [ ] Cache
 - [ ] 其他
   - [ ] 分布式锁
@@ -75,3 +80,24 @@ tag:
 
 
 
+
+
+
+
+
+
+## 模块介绍
+
+- nacos-provider : 10000
+- nacos-consumer : 10100
+- nacos-config : 10200
+- nacos-use-service-name : 10300
+- nacos-use-env-name : 10400
+- gateway-demo : 10500
+- swagger-user : 10600
+- swagger-order : 10700
+- gateway-swagger : 10800
+
+
+
+<img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />

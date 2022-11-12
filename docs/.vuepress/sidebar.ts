@@ -453,8 +453,32 @@ export default defineSidebarConfig({
     },
   ],
 
+  // 资料分享
+  "/shared/": [
+    {
+      text: "m1版本mac安装idea2022.2",
+      link: "mac-idea.md",
+    },
+  ],
+
+
   // springcloud-alibaba
   "/springcloud-alibaba/": [
+    {
+      text: "00.说明",
+      collapsable: true,
+      prefix: "before/",
+      children: [
+        {
+          text: "团队如何做技术选型",
+          link: "choose-version.md",
+        },
+        {
+          text: "自定义starter管理依赖的版本",
+          link: "use-nexus.md",
+        },
+      ],
+    },
     {
       text: "01.分布式服务治理",
       link: "chapter01.md",

@@ -1,15 +1,18 @@
 ---
-"title": "测试代码片段"
+"title": "团队如何做技术选型"
 category:
   - "springcloud-alibaba"
 tag:
-  - "test"
+  - "choose-version"
 ---
 
-zheshi 
+## 为什么要做技术选型
 
+## 技术选型的标准
 
+## 技术选型的实践过程
 
+## 总结
 
 
 

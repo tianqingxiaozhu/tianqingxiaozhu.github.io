@@ -88,4 +88,7 @@ mybrotherzinfo
 ## 总结
 
 
+每次修改后都需要重启服务的配置项不用放到配置中心中；
+
 <img style="border:1px red solid; display:block; margin:0 auto;" :src="$withBase('/qrcode.jpg')" alt="微信公众号" />
+
