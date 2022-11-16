@@ -27,24 +27,7 @@ tag:
 
 ## 注册中心选型
 
-做技术选型，大多情况下要从以下几个方面入手：
-
-1. 项目的开源程度及社区活跃程度。
-2. 项目的市场应用广度。
-3. 功能与业务的契合程度。
-4. 考虑相关成本：
-   1. 经济成本，包括但不限于服务器资源...
-   2. 人力成本，包括迁移成本、集成开发成本；
-   3. 运维成本
-   4. 扩展成本
-   5. ...
-
-大概的实践过程是：
-
-1. 架构师根据上面几个选择标准，选定一组相关的备用技术；
-2. 在架构会议上进行讨论，从各个角度去讨论是否符合自己公司的组织内的业务和技术架构；
-3. 架构师团队编写对应的demo样例及相关的文档，甚至还需要举行培训会议；
-4. 团队编写相关代码；
+关于如何做技术选型，参见《00.前言》。
 
 在Java领域中大概有这么几种服务治理中心：Zookeeper 、 Eureka 、 Consul 、 Nacos 。下面简单介绍一下这几种服务治理的相关组件。
 
@@ -118,22 +101,13 @@ Nacos是阿里巴巴开源的一个分布式组件，也是本篇文章的主要
 
 ![nacos生态](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108121154.png)
 
-## 服务的注册与发现
+## 实战演练
 
-### 说明
+> 微信扫码关注“天晴小猪”（ID： it-come-true），回复“1001”，获取本章节实战源码。
 
-![Spring版本关系](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108131544.png)
+创建两个服务，一个是服务提供者（provider），一个是服务消费者（consumer），让两个服务都注册到nacos服务器上，然后让服务消费者调用服务提供者的接口。
 
-![组件之间的版本关系](https://tianqingxiaozhu.oss-cn-shenzhen.aliyuncs.com/blog20221108131636.png)
-
-- JDK1.8
-- CentOS7.9
-- SpringBoot-2.2.5.RELEASE
-- SpringCloud-Hoxton.SR3
-- SpringCloudAlibaba-2.2.1.RELEASE
-
-项目使用idea中的 Spring Initializer 进行生成。这样做的好处是`当团队规模较大，并且每一个团队都负责一个模块时，可以让不同的团队只需要下载自己负责的模块代码即可，便于代码权限的管理`。
-
+第一步，我们要先搭建nacos的服务；第二步，我们创建两个服务，并配置好注册的nacso的服务地址；第三步，在服务提供者服务中提供一个接口供服务消费者进行调用，之后再在服务消费者服务中提供一个接口来调用服务提供者提供的接口。下面我们开始进行实战。
 
 ### 安装nacos服务
 
@@ -183,6 +157,8 @@ WantedBy=multi-user.target
 浏览器打开： http://192.168.1.150:8848/nacos 出现管理台页面，输入用户名密码： nacos/nacos ，登录成功。
 
 ### 创建provider模块
+
+使用springinital工具进行创建项目模块。
 
 1. 修改pom
 
@@ -352,7 +328,11 @@ management:
 
 浏览器中输入： `http://localhost:11000/consumer/hello` ，访问成功。
 
-5. 使用RestTemplate访问provider接口
+### 实现远程调用
+
+我们这里采用两种不同的客户端来完成远程调用。
+
+1. 使用RestTemplate访问provider接口
 
 - 添加配置项
 
@@ -368,7 +348,7 @@ management:
 
 浏览器中输入： `http://localhost:11000/consumer/hello1` ，访问成功。
 
-6. 使用OpenFeign访问provider接口
+2. 使用OpenFeign访问provider接口
 
 - 修改pom
 
@@ -394,7 +374,7 @@ management:
 
 浏览器中输入： `http://localhost:11000/consumer/hello2` ，访问成功。
 
-### Nacos开发实践
+## Nacos开发实践
 
 当项目在实际开发过程中会有很多的环境，如dev、sit、uat、prd等环境。在不同的环境中，可以通过配置多套nacos服务，并在不同的配置文件中配置上相应的nacos服务地址，实现环境隔离。
 
@@ -419,6 +399,11 @@ management:
 浏览器中分别输入： `http://localhost:11000/consumer/hello1` 、 `http://localhost:11000/consumer/hello2` ，均访问成功。
 
 
+
+## 特别说明
+
+- 组件之间版本的选择
+- 使用starter统一管理组件的版本
 
 ## 总结
 

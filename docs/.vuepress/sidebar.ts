@@ -465,38 +465,23 @@ export default defineSidebarConfig({
   // springcloud-alibaba
   "/springcloud-alibaba/": [
     {
-      text: "00.说明",
-      collapsable: true,
-      prefix: "before/",
-      children: [
-        {
-          text: "团队如何做技术选型",
-          link: "choose-version.md",
-        },
-        {
-          text: "自定义starter管理依赖的版本",
-          link: "use-nexus.md",
-        },
-      ],
-    },
-    {
-      text: "01.分布式服务治理",
+      text: "01.服务治理之Nacos",
       link: "chapter01.md",
     },
     {
-      text: "02.分布式服务配置",
+      text: "02.服务配置之Nacos",
       link: "chapter02.md",
     },
     {
-      text: "03.分布式远程服务调用",
+      text: "03.服务调用之OpenFeign",
       link: "chapter03.md",
     },
     {
-      text: "04.分布式服务网关",
+      text: "04.服务网关之Gateway",
       link: "chapter04.md",
     },
     {
-      text: "05.分布式服务事务管理",
+      text: "05.分布式事务管理之Seata",
       link: "chapter05.md",
     },
     {
