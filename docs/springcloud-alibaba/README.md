@@ -54,12 +54,12 @@ tag:
     - [x] 以环境名作为命名空间进行配置隔离
     - [ ] 灰度发布
 - [ ] gateway
-  - [x] 服务发现的路由规则
+  - [x] 结合配置中心进行请求转发
   - [x] 重写路由
   - [x] 路由规则可配置化
   - [ ] https的使用[xxx] 现在微服务的部署架构大多情况下是SLB+Nginx类型的部署模型，而微服务大多都是在内网环境中，因此网关也很少使用https；
   - [ ] 自定义全局异常[xxx]
-  - [ ] 基于限流及自定义限流异常
+  - [x] 基于限流及自定义限流异常
   - [x] 集成swagger
   - [ ] CROS方案
   - [ ] 灰度发布
@@ -87,20 +87,29 @@ tag:
 
 > 微信扫码关注“天晴小猪”（ID： it-come-true），回复“1000”，获取本系列教程的实战源码。
 
-模块与端口对应关系如下：
+实战演练功能及代码模块与端口对应关系如下：
 
-- nacos-provider : 10000
-- nacos-consumer : 10100
-- nacos-config : 10200
-- nacos-use-service-name : 10300
-- nacos-use-env-name : 10400
-- gateway-demo : 10500
-- swagger-user : 10600
-- swagger-order : 10700
-- gateway-swagger : 10800
-- seata-storage : 10900
-- seata-account : 11000
-- seata-order : 11100
+- `Nacos注册中心`
+  - nacos-provider : 10000 注册到nacos上，并对外提供接口；
+  - nacos-consumer : 10100 注册到nacos上，并通过RestTemplate和OpenFeign分别调用 nacos-provider 提供的接口；
+- `Nacos配置中心及最佳实践`
+  - nacos-config : 10200 实践传统方式获取配置项、配置中心方式获取配置、配置项映射成JavaBean、实时刷新配置项；
+  - nacos-use-service-name : 10300 使用服务名进行隔离；
+  - nacos-use-env-name : 10400 使用环境变量名称进行隔离；
+- `Gateway网关服务（基础特性的实践）`
+  - gateway-demo : 10500 重写路由规则、结合Nacso实现可配置化路由规则；
+  - nacos-provider : 10000 实践服务发现的路由规则；
+- `OpenFeign远程服务调用`
+  - nacos-provider : 10000 服务提供者，实现多参数、路径中带参数、传递实体、上传和下载文件等接口；
+  - nacos-consumer : 10100 服务消费者，通过OpenFeign远程调用 服务提供者 提供的各种接口、开启GZIP压缩、开启日志、超时控制、替换客户端；
+- `Gateway网关服务（高级特性，网关服务整合多服务的接口文档）`
+  - swagger-user : 10600 
+  - swagger-order : 10700 
+  - gateway-swagger : 10800 
+- `Seata分布式事务`
+  - seata-storage : 10900
+  - seata-account : 11000
+  - seata-order : 11100
 
 
 ## 技术选型
@@ -137,6 +146,10 @@ tag:
 4. 团队编写相关代码；
 
 > 在实际的开发过程中，大多情况下都是架构师团队负责选取一些组件，而我们主要负责使用和业务代码，因此在我们的系列文章中，我们不对同类技术组件进行着重介绍，只着重介绍具体组件的用法。大家对上面的方法论有所了解即可。
+
+### 版本的选择
+
+技术选型后下一步就是要确定组件的版本，版本的选择标准就只有一个——选择稳定发布并长期维护的版本，因为稳定发布版本不会有重大的漏洞，版本更新也是稳定发布长期维护的。比如，现在jdk的版本已经到17了，但是大多数厂商依然用的还是jdk8，就是因为jdk8是稳定发布并长期维护的。
 
 ## SpringCloud的版本
 
